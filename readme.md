@@ -39,7 +39,7 @@ This is a Todo application built with Node.js, Express, and MongoDB. It allows u
 
 3. Start the server
     ```sh
-    npm start
+    node index.js
     ```
 
 ## Routes
