@@ -29,11 +29,11 @@ This is a Todo application built with Node.js, Express, and MongoDB. It allows u
 
 1. Clone the repository
     ```sh
-    git clone https://github.com/yourusername/todo-app.git
+    git clone https://github.com/diljotsingh04/todo_backend_for_company.git
     ```
 2. Install NPM packages
     ```sh
-    cd todo-app
+    cd todo_backend_for_company
     npm install
     ```
 
