@@ -108,8 +108,35 @@ const update = async (req, res) => {
     }
 };
 
+const deleteTodo = async (req, res) => {
+    const todoId = req.params.id;
+
+    try {
+        const deletedTodo = await Todos.findByIdAndDelete(todoId);
+
+        if (!deletedTodo) {
+            return res.status(404).send({
+                success: false,
+                message: 'Todo not found'
+            });
+        }
+
+        return res.send({
+            success: true,
+            message: 'Todo Deleted Successfully'
+        });
+    } catch (e) {
+        return res.status(500).send({
+            success: false,
+            message: 'Failed to delete todo',
+            error: e.message
+        });
+    }
+};
+
 module.exports = {
     create,
     getTodos,
-    update
+    update,
+    deleteTodo
 };
